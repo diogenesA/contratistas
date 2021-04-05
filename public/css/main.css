@@ -1,0 +1,13 @@
+header{
+    background: #8E2DE2;
+    background: -wedkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    
+}
+
+/*ESTILOS PARA LA TABLE*/
+
+/* Para alinear los botones y cuadros de busqueda*/
+.btn-group, .btn-group-vertical{
+    position: absolute !important;
+}

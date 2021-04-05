@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 //Route::get('/contratistas','ContratistasController@index');
 //Route::get('/contratistas/create','ContratistasController@create');
 
-Route::resource('contratistas','App\Http\Controllers\ContratistasController');
+Route::resource('contratistas','App\Http\Controllers\ContratistasController')->middleware('auth');
+Auth::routes();//['register'=>false, 'reset'=>false]
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
